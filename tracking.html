@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Track your CAC Couriers & Shipping Company shipment — enter your tracking number and transport mode."/>
+  <title>Track Shipment — CAC Couriers & Shipping Company</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar"><div class="container"><div class="topbar__inner"><div class="topbar__left"><span class="topbar__item"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>United Kingdom, USA , Togo</span><span class="topbar__item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg><a href="/cdn-cgi/l/email-protection#d59cbbb3ba95b6b4b6b9bab2bca6a1bcb6a6fbb6bab8"><span class="__cf_email__" data-cfemail="efa6818980af8c8e8c838088869c9b868c9cc18c8082">[email&#160;protected]</span></a></span></div><div class="topbar__right"><a href="about.html">About Us</a><a href="#">FAQ</a></div></div></div></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" role="banner">
+    <div class="container">
+      <nav class="navbar__inner" aria-label="Main navigation">
+        <a href="index.html" class="logo"><div class="logo__mark" aria-hidden="true"><img src="assets/images/logo1.png" alt="CAC Couriers & Shipping Company Logo"></div><div class="logo__text"><strong>CAC</strong><span>Couriers & Shipping Company</span></div></a>
+        <ul class="nav__links" role="list"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="tracking.html" class="active">Tracking</a></li><li><a href="contact.html">Contact</a></li></ul>
+        <div class="nav__right"><a href="tel:+12037142616" class="nav__phone"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11 19a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 1.61 3.4 2  2 0  0 1 3.6 1h3a2 2 0  0 1 2 1.72 12.8 12.8 0  0 0 .7 2.81 2  2 0  0 1-.45 2.11L7.91 8.55a16 16 0  0 0 6 6l.91-.91a2 2 0  0 1 2.11-.45 12.8 12.8 0  0 0 2.81.7A2 2 0  0 1 22 16z"/></svg>+1 (203) 714-2616</a><a href="contact.html" class="btn btn-primary btn-sm">Request a Quote</a></div>
+        <button class="nav__hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span><span></span></button>
+      </nav>
+    </div>
+    <nav class="nav__mobile" id="mobileNav"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a><a href="tracking.html" class="active">Tracking</a><a href="contact.html">Contact</a><a href="contact.html" class="btn btn-primary btn-full" style="margin-top:8px">Request a Quote</a></nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-labelledby="tracking-page-heading">
+      <img src="assets/images/track1.png" class="page-hero__bg" alt="" aria-hidden="true">
+      <div class="page-hero__grid" aria-hidden="true"></div>
+      <div class="page-hero__stripe" aria-hidden="true"></div>
+      <div class="container"><div class="page-hero__content">
+        <div class="eyebrow"><span class="eyebrow__line"></span><span class="eyebrow__text">Live Tracking</span></div>
+        <h1 class="heading-xl" id="tracking-page-heading">Track Your <em>Shipment</em></h1>
+        <p class="lead">Enter your tracking number and select your transport mode to get real-time cargo status.</p>
+      </div></div>
+    </section>
+
+    <!-- TRACKING FORM SECTION -->
+    <section class="section section--dark" aria-labelledby="track-form-heading">
+      <div class="container">
+        <div class="tracking-wrap">
+
+          <!-- LEFT: Tracking form card -->
+          <div class="tracking-form-card">
+            <div class="eyebrow"><span class="eyebrow__line"></span><span class="eyebrow__text">Enter Details</span></div>
+            <h2 class="heading-md" id="track-form-heading" style="margin-bottom:var(--sp-lg)">Find Your Cargo</h2>
+
+            <!--
+              TRACKING FORM
+              On submit, JS validates inputs and redirects to:
+              tracking-result.html?id=XXXX&mode=YYYY
+            -->
+            <form id="trackingForm" novalidate aria-label="Shipment tracking form">
+
+              <!-- Tracking Number -->
+              <div class="form-group">
+                <label class="form-label" for="trackingNumber">
+                  Tracking Number <span class="req" aria-hidden="true">*</span>
+                </label>
+                <div class="form-input-wrap">
+                  <!-- Barcode icon -->
+                  <svg class="form-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <rect x="3" y="4" width="3" height="16"/><rect x="8" y="4" width="1.5" height="16"/>
+                    <rect x="12" y="4" width="3" height="16"/><rect x="17" y="4" width="1" height="16"/><rect x="20" y="4" width="1" height="16"/>
+                  </svg>
+                  <input
+                    type="text"
+                    id="trackingNumber"
+                    name="trackingNumber"
+                    class="form-input"
+                    placeholder="e.g. CAC-2026-00123"
+                    maxlength="40"
+                    autocomplete="off"
+                    aria-required="true"
+                    aria-describedby="numHint numError"
+                  />
+                </div>
+                <p class="form-hint" id="numHint">Your tracking number can be found on your cargo receipt or booking confirmation.</p>
+                <p class="form-error" id="numError" role="alert" aria-live="polite" hidden>Please enter a valid tracking number (min. 4 characters).</p>
+              </div>
+
+              <!-- Transport Mode -->
+              <div class="form-group">
+                <label class="form-label" for="transportMode">
+                  Transport Mode <span class="req" aria-hidden="true">*</span>
+                </label>
+                <div class="form-input-wrap" style="position:relative">
+                  <!-- Truck icon -->
+                  <svg class="form-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+                  </svg>
+                  <select
+                    id="transportMode"
+                    name="transportMode"
+                    class="form-select"
+                    aria-required="true"
+                    aria-describedby="modeError"
+                  >
+                    <option value="" disabled selected>Select transport mode</option>
+                    <option value="land">🚛  Land Shipping</option>
+                    <option value="air">✈️  Air Freight</option>
+                    <option value="sea">🚢  Sea Shipping</option>
+                  </select>
+                  <!-- Dropdown arrow -->
+                  <svg class="form-select-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--muted)" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+                <p class="form-error" id="modeError" role="alert" aria-live="polite" hidden>Please select a transport mode.</p>
+              </div>
+
+              <!-- Submit button -->
+              <button type="submit" id="trackSubmit" class="btn btn-primary btn-full" style="margin-top:var(--sp-sm);padding:16px 32px;font-size:15px">
+                <span class="btn-label">Track Shipment</span>
+                <!-- Loading spinner (hidden by default; shown by JS during submit) -->
+                <span class="btn-spinner" aria-hidden="true" hidden>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="animation:spin 0.8s linear infinite">
+                    <path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" opacity="0.2"/>
+                    <path d="M12 3a9 9 0 0 1 9 9" stroke-linecap="round"/>
+                  </svg>
+                </span>
+                <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+
+            </form>
+          </div>
+          <!-- /tracking-form-card -->
+
+          <!-- RIGHT: Info blocks -->
+          <div class="tracking-info-panel" aria-label="Tracking information">
+
+            <div class="track-info-block">
+              <div class="track-info-block__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <div class="track-info-block__title">Real-Time Updates</div>
+                <p class="track-info-block__text">Cargo status is updated every 30 minutes across our full global network.</p>
+              </div>
+            </div>
+
+            <div class="track-info-block">
+              <div class="track-info-block__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+              </div>
+              <div>
+                <div class="track-info-block__title">120+ Countries</div>
+                <p class="track-info-block__text">Full shipment visibility whether your cargo is in United Kingdom, USA and Togo or on the other side of the world.</p>
+              </div>
+            </div>
+
+            <div class="track-info-block">
+              <div class="track-info-block__icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11 19a19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72 12.8 12.8 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.55a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.8 12.8 0 0 0 2.81.7A2 2 0 0 1 22 16z"/></svg>
+              </div>
+              <div>
+                <div class="track-info-block__title">24/7 Support</div>
+                <p class="track-info-block__text">Can't find your tracking number? Our team is available 24/7 to assist you.</p>
+              </div>
+            </div>
+
+
+
+          </div>
+          <!-- /tracking-info-panel -->
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand"><a href="index.html" class="logo" aria-label="CAC Couriers & Shipping Company Home"><div class="logo__mark" aria-hidden="true"><img src="assets/images/logo1.png" alt="CAC Couriers & Shipping Company Logo"/></div><div class="logo__text"><strong>CAC</strong><span>Couriers & Shipping Company</span></div></a><p>Your trusted global cargo partner since 2012.</p></div>
+        <div><p class="footer__col-title">Quick Links</p><nav class="footer__links"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html">Services</a><a href="tracking.html">Tracking</a><a href="contact.html">Contact Us</a></nav></div>
+        <div><p class="footer__col-title">Services</p><nav class="footer__links"><a href="services.html#air">Air Freight</a><a href="services.html#sea">Ocean Freight</a><a href="services.html#land">Road Freight</a></nav></div>
+        <div><p class="footer__col-title">Get in Touch</p><div class="footer__contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg><strong>United Kingdom Office</strong><br/>50 Princes Street<br/>Ipswich, Suffolk, IP1 1RJ<br/>United Kingdom</div><div class="footer__contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg><strong>United States Office</strong><br/>501 Kings Highway Fairfield, CT 06825<br/>United States of America</div><div class="footer__contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg><strong>Togo Office (Africa)</strong><br/>1145 Avenue Joseph Paul III, Nyekonakpoe<br/>Lomé - Togo</div><div class="footer__contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg><a href="/cdn-cgi/l/email-protection#f3ba9d959cb39092909f9c949a80879a9080dd909c9e"><span class="__cf_email__" data-cfemail="01486f676e416260626d6e666872756862722f626e6c">[email&#160;protected]</span></a></div></div>
+      </div>
+      <div class="footer__bottom"><p>© 2026 CAC Couriers & Shipping Company. All rights reserved.</p><div style="display:flex;gap:16px"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></div>
+    </div>
+  </footer>
+
+  <style>
+    @keyframes spin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+  </style>
+  <script src="js/script.js"></script>
+</body>
+</html>
